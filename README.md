@@ -28,7 +28,7 @@ Javascript like the weekend's prompt, you should use jQuery selectors to manipul
 
 ===
 
-#### Part 1
+#### Part 1 - DONE
 
 ```js
 var makeMiddleEarth = function () {
@@ -41,7 +41,7 @@ var makeMiddleEarth = function () {
 makeMiddleEarth();
 ```
 
-#### Part 2
+#### Part 2 - DONE
 ```js
 var makeHobbits = function () {
    // display an `unordered list` of hobbits in the shire
@@ -50,7 +50,7 @@ var makeHobbits = function () {
 };
 ```
 
-#### Part 3
+#### Part 3 - DONE
 ```js
 var keepItSecretKeepItSafe = function () {
    // create a div with an id of `'the-ring'`
@@ -59,7 +59,7 @@ var keepItSecretKeepItSafe = function () {
 };
 ```
 
-#### Part 4
+#### Part 4 - DONE
 
 ```js
 var makeBuddies = function () {
@@ -69,7 +69,7 @@ var makeBuddies = function () {
 };
 ```
 
-#### Part 5
+#### Part 5 -  DONE
 
 ```js
 var beautifulStranger = function () {
@@ -77,9 +77,8 @@ var beautifulStranger = function () {
 };
 ```
 
-#### Part 6
+#### Part 6 - DONE!!!
 ```js
-var leaveTheShire = function () {
    // assemble the `hobbits` and move them to `rivendell`
 };
 ```
