@@ -47,32 +47,30 @@ function makeHobbits(){
     $(newEl).append('<li class="hobbit">' + someValue + '</li>')
   });
 }
-
 makeHobbits();
 
   
 function keepItSecretKeepItSafe(){
 
-var Div = $('<div>');
-var frodoBaggins = ('li:nth-child(1)');
-$(frodoBaggins).append(Div);  
+  var Div = $('<div>');
+  var frodoBaggins = ('li:nth-child(1)');
+  $(frodoBaggins).append(Div);  
   // not sure what this is asking: add the ring as a child of `Frodo`
-var ringDiv = $('#middle-earth > article:nth-child(1) > ul > li:nth-child(1) > div')
+  var ringDiv = $('#middle-earth > article:nth-child(1) > ul > li:nth-child(1) > div')
     ringDiv.prop('id', 'middle-earth').prop('class', 'magic-imbued-jewelry')
 
 }
-
 keepItSecretKeepItSafe();
 
 
 function makeBuddies(){
 
-var asideTag = $('<aside>');  
-var rivChild = $('#middle-earth > article:nth-child(2)');
-var newEl = $('<ul>');
-$(rivChild).append(newEl);
-$.each(buddies, function(index, someValue){
-$(newEl).append('<li>' + someValue + '</li>')
+  var asideTag = $('<aside>');  
+  var rivChild = $('#middle-earth > article:nth-child(2)');
+  var newEl = $('<ul>');
+  $(rivChild).append(newEl);
+  $.each(buddies, function(index, someValue){
+    $(newEl).append('<li>' + someValue + '</li>')
   });
 
 }
@@ -81,41 +79,61 @@ makeBuddies();
 
 function beautifulStranger(){
 // //   // your answers here
-var strider = $('#middle-earth > article:nth-child(2) > ul > li:nth-child(4)');
-strider.text("Aragorn");
+  var strider = $('#middle-earth > article:nth-child(2) > ul > li:nth-child(4)');
+  strider.text("Aragorn");
 
 }
 beautifulStranger();
 
 function leaveTheShire(){
 
-var hobbitMove = $('#middle-earth > article:nth-child(1) > ul');
-var rivChild = $('#middle-earth > article:nth-child(2)');
-hobbitMove.appendTo(rivChild);
-}
+  var hobbitMove = $('#middle-earth > article:nth-child(1) > ul');
+  var rivChild = $('#middle-earth > article:nth-child(2)');
+  hobbitMove.appendTo(rivChild);
+  }
 
-leaveTheShire();
+  leaveTheShire();
 
 function forgeTheFellowship() {
 
-var Div = $('<div>');
-var rivChild = $('#middle-earth > article:nth-child(2)');
+  var Div = $('<div>');
+  var rivChild = $('#middle-earth > article:nth-child(2)');
+  rivChild.append(Div);
+  (Div).prop('class', 'the-fellowship');
+
+  var fellowBuddies = $('#middle-earth > article:nth-child(2) > ul:nth-child(2)');
+  var fellowHobbits = $('#middle-earth > article:nth-child(2) > ul:nth-child(3)');
+  var combinedFellow = $('#middle-earth > article:nth-child(2) > div.the-fellowship');
+
+   $.each(fellowBuddies, function(index, someValue){
+    $(combinedFellow).append(someValue);
+  });
+   $.each(fellowHobbits, function(index, someValue){
+    $(combinedFellow).append(someValue);
+  });
+
 
 }
-
 forgeTheFellowship();
 
-// function theBalrog(){
-//   // your answers here
-// }
+  var theBalrog = function () {
+  var gandalfLocation = $('#middle-earth > article:nth-child(2) > div > ul:nth-child(1) > li:nth-child(1)');
+  var gandalfTheWhite = {
+    backgroundColor: "white",
+    border: "1px solid grey"
+  };
+  gandalfLocation.text('Gandalf the White').css(gandalfTheWhite);
+}
+theBalrog();
 
-// theBalrog();
 
-// function hornOfGondor() {
-//   // your answers here
-// }
+function hornOfGondor() {
 
-// hornOfGondor();
+  var boromirLocation = $('#middle-earth > article:nth-child(2) > div > ul:nth-child(1) > li:nth-child(5)');
+  alert("The horn of gondor has been blown!");
+  $('#middle-earth > article:nth-child(2) > div > ul:nth-child(1) > li:nth-child(5)').remove();
+}
+hornOfGondor();
 
 // function itsDangerousToGoAlone() {
 //   // your answers here
